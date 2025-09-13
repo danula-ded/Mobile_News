@@ -1,0 +1,106 @@
+@use '../../shared/assets/styles/variables' as *;
+
+.side-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &--open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: $shadow-lg;
+    z-index: 10001;
+  }
+
+  &--open &__content {
+    transform: translateX(0);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: $spacing-lg;
+    border-bottom: 1px solid #e0e0e0;
+    background: #ffffff;
+    min-height: 60px;
+  }
+
+  &__close {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #f5f5f5;
+    font-size: 24px;
+    color: #666666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #e0e0e0;
+      transform: scale(1.1);
+    }
+  }
+
+  &__nav {
+    flex: 1;
+    padding: $spacing-xl 0;
+    overflow-y: auto;
+  }
+
+  &__nav-item {
+    display: block;
+    padding: $spacing-lg $spacing-xl;
+    color: #333333;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    letter-spacing: 0.5px;
+
+    &:hover {
+      background: #f8f9fa;
+      border-left-color: #007bff;
+      padding-left: calc($spacing-xl + 4px);
+      transform: translateX(10px);
+    }
+
+    &:active {
+      background: #e9ecef;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@use '../../shared/assets/styles/variables' as *;
+
+.footer {
+  background-color: $bg-primary;
+  border-top: 1px solid $border-color;
+  padding: $spacing-lg;
+  text-align: center;
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-md;
+    flex-wrap: wrap;
+
+    @media (max-width: $mobile) {
+      gap: $spacing-md;
+    }
+  }
+
+  &__link {
+    color: $text-secondary;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__copyright {
+    color: $text-muted;
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+    align-items: center;
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      justify-content: center;
+      gap: $spacing-sm;
+    }
+  }
+}
