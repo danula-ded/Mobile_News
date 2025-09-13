@@ -8,7 +8,7 @@ import './App.scss';
 export const App: React.FC = () => {
   return (
     <Provider store={store}>
-      <Router>
+      <Router basename="/Mobile_News">
         <div className="app">
           <Routes>
             <Route path="/" element={<MainPage />} />
