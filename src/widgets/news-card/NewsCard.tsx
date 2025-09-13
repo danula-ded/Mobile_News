@@ -1,19 +1,14 @@
 import React from 'react';
-import classNames from 'classnames';
 import { News } from '@/entities/news/model/types';
-import { getDate, getImageUrl, formatDateForDisplay } from '@/shared/lib/utils';
+import { getImageUrl } from '@/shared/lib/utils';
 import './NewsCard.scss';
 
 interface NewsCardProps {
   news: News;
-  prevDateDiff: boolean;
-  nextDateDiff: boolean;
 }
 
 export const NewsCard: React.FC<NewsCardProps> = ({ 
-  news, 
-  prevDateDiff, 
-  nextDateDiff 
+  news
 }) => {
   const handleClick = () => {
     window.open(news.web_url, '_blank');

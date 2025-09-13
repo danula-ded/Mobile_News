@@ -6,11 +6,10 @@ import './NewsList.scss';
 
 interface NewsListProps {
   newsList: News[];
-  refNewsList: React.RefObject<HTMLDivElement | null>;
   loading?: boolean;
 }
 
-export const NewsList: React.FC<NewsListProps> = ({ newsList, refNewsList, loading = false }) => {
+export const NewsList: React.FC<NewsListProps> = ({ newsList, loading = false }) => {
   if (loading) {
     return (
       <div className="news-list">
@@ -24,12 +23,10 @@ export const NewsList: React.FC<NewsListProps> = ({ newsList, refNewsList, loadi
   return (
     <div className="news-list">
       {newsList.map((news, index) => (
-        <NewsCard
-          key={`${news.web_url}-${news.pub_date}-${index}`}
-          news={news}
-          prevDateDiff={false}
-          nextDateDiff={false}
-        />
+            <NewsCard 
+              key={`${news.web_url}-${news.pub_date}-${index}`}
+              news={news} 
+            />
       ))}
     </div>
   );

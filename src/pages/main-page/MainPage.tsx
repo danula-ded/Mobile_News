@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '@/shared/lib/hooks';
-import { fetchNewsForDay, updateCurrentNews, clearError, loadPreviousDay } from '@/entities/news/model/newsSlice';
+import { fetchNewsForDay, updateCurrentNews, clearError } from '@/entities/news/model/newsSlice';
 import { Header } from '@/widgets/header';
 import { SideMenu } from '@/widgets/side-menu';
 import { NewsList } from '@/widgets/news-list';
@@ -117,7 +117,6 @@ export const MainPage: React.FC = () => {
                               </h3>
                               <NewsList
                                 newsList={[...news[key]].sort((a, b) => new Date(b.pub_date).getTime() - new Date(a.pub_date).getTime())}
-                                refNewsList={refNewsList}
                                 loading={loading}
                               />
                             </div>

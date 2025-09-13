@@ -41,7 +41,13 @@ export const newsApi = {
       return mockNewsData.map((item, index) => ({
         ...item,
         _id: `${date.toISOString().split('T')[0]}-mock-${index}`,
-        pub_date: date.toISOString()
+        pub_date: date.toISOString(),
+        abstract: '',
+        source: 'The New York Times',
+        multimedia: item.multimedia.map(media => ({
+          url: media.url,
+          crop_name: 'thumbStandard'
+        }))
       }));
     }
   }
