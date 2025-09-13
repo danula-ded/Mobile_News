@@ -4,6 +4,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
+  base: '/Mobile_News/',
   server: {
     port: 3000,
     open: true,

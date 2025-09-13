@@ -8,8 +8,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://danula-ded.github.io/Mobile_News",
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.0",
     "@types/node": "^22.13.5",
@@ -29,6 +32,7 @@
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.19",
+    "gh-pages": "^6.3.0",
     "globals": "^15.15.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
