@@ -1,0 +1,62 @@
+@use '../../shared/assets/styles/variables' as *;
+
+.main-page {
+  min-height: 100vh;
+  background-color: $bg-secondary;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+
+  &__error {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #721c24;
+    padding: $spacing-md $spacing-lg;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid #f5c6cb;
+    font-weight: 500;
+    box-shadow: $shadow-sm;
+    position: sticky;
+    top: 60px;
+    z-index: 5;
+  }
+
+  &__content {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    height: calc(100vh - 60px);
+    
+    // Для мобильных устройств используем скролл окна
+    @media (max-width: 768px) {
+      height: auto;
+      overflow-y: visible;
+    }
+  }
+}
+
+.news-date-section {
+  margin-bottom: $spacing-xl;
+  
+  .news-date-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: $spacing-md;
+    padding: $spacing-sm $spacing-md;
+    background-color: $bg-primary;
+    border-radius: $border-radius;
+    border-left: 4px solid $primary-color;
+  }
+}
+
+.no-more-news {
+  text-align: center;
+  padding: $spacing-xl;
+  color: $text-secondary;
+  font-style: italic;
+}
