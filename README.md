@@ -1,9 +1,8 @@
 # 📱 Mobile News App
 
-[![Quick Start](https://img.shields.io/badge/🚀-Quick%20Start-green?style=flat-square&logo=rocket)](QUICK_START.md)
-[![Requirements](https://img.shields.io/badge/📋-Requirements-blue?style=flat-square&logo=markdown)](REQUIREMENTS.md)
-[![Setup Guide](https://img.shields.io/badge/⚙️-Setup-orange?style=flat-square&logo=gear)](SETUP.md)
-[![Navigation](https://img.shields.io/badge/🧭-Navigation-purple?style=flat-square&logo=compass)](NAVIGATION.md)
+[![📋 Техническое задание](https://img.shields.io/badge/📋-Техническое%20задание-4285F4?style=flat-square&logo=google-docs)](REQUIREMENTS.md)
+[![🚀 Инструкция по запуску](https://img.shields.io/badge/🚀-Инструкция%20по%20запуску-00C851?style=flat-square&logo=rocket)](SETUP.md)
+[![🧭 Навигация по проекту](https://img.shields.io/badge/🧭-Навигация%20по%20проекту-9C27B0?style=flat-square&logo=compass)](NAVIGATION.md)
 
 Мобильное веб-приложение для просмотра новостей, построенное с использованием Feature-Sliced Design (FSD) архитектуры.
 
@@ -26,12 +25,6 @@
 - ✅ Загрузка изображений с fallback
 - ✅ Обработка ошибок
 - ✅ Плавные анимации и переходы
-
-## 🎯 Быстрый старт
-
-[![📋 Техническое задание](https://img.shields.io/badge/📋-Техническое%20задание-4285F4?style=flat-square&logo=google-docs)](REQUIREMENTS.md)
-[![🚀 Инструкция по запуску](https://img.shields.io/badge/🚀-Инструкция%20по%20запуску-00C851?style=flat-square&logo=rocket)](SETUP.md)
-[![🧭 Навигация по проекту](https://img.shields.io/badge/🧭-Навигация%20по%20проекту-9C27B0?style=flat-square&logo=compass)](NAVIGATION.md)
 
 ## 🏗️ Архитектура FSD
 
